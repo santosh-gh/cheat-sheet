@@ -530,3 +530,51 @@ If your group has 8 hosts. It will run the whole play on 4 hosts and then the sa
 </b></details>
 
 <!-- {% endraw %} -->
+
+
+
+
+# Ansible Tutorial
+
+$ sudo apt install ansible
+$ sudo apt install openssh-server
+
+ssh directory
+$ ls -la .ssh
+$ ssh-keygen -t ed25519 -C "Jay default"
+$ cat .ssh/id_ed25519.pub
+$ cat .ssh/id_ed25519
+
+# copy file to Target Server
+$ ssh-copy-id -i ~/.ssh/id_ed22519.pub [server-ip]
+
+
+$ cat .ssh/authorized_keys
+
+# Generate a key for Ansible
+
+$ ssh-keygen -t ed25519 -C "ansible"
+
+$ ansible all -m ping
+
+$ cat ansible.cfg
+
+$ ansible all --list-hosts
+
+$ ansible all -m gather_facts
+
+$ ansible all -m gather_facts --limit [server-ip]
+
+$ ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+$ ansible all -m apt -a name=vim-nox --become --ask-become-pass
+
+$ ansible all -m apt -a name=tmux --become --ask-become-pass
+
+$ ansible all -m apt -a "name=snapd state=latest" --become --ask-become-pass
+
+$ ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
+
+$ ansible-playbook --ask-become-pass install_apache.yaml
+
+
