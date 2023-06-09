@@ -1875,3 +1875,107 @@ If it's a matter of changing a resource name, you could make use of `terraform s
 Use the meta-argument `depends_on` in the app resource definition. This way the app will depend on the cluster resource and order will be maintained in creation of the resources.
 
 </b></details>
+
+
+
+
+-   The same variable is defined in the following places:
+    The file terraform.tfvars
+    Environment variable
+    Using -var or -var-file
+    According to variable precedence, which source will be used first?
+
+
+    The order is:
+
+    Environment variable
+    The file terraform.tfvars
+    Using -var or -var-file
+
+-   Explain data sources in Terraform
+
+    Data sources used to get data from providers or in general from external resources to Terraform (e.g. public clouds like AWS, GCP, Azure).
+    Data sources used for reading. They are not modifying or creating anything
+    Many providers expose multiple data sources
+
+-   What is a data source? In what scenarios for example would need to use it?
+
+    Data sources lookup or compute values that can be used elsewhere in terraform configuration.
+    There are quite a few cases you might need to use them:
+
+    you want to reference resources not managed through terraform
+    you want to reference resources managed by a different terraform module
+    you want to cleanly compute a value with typechecking, such as with aws_iam_policy_document
+
+-   What are "Provisioners"? What they are used for?
+
+    Provisioners can be described as plugin to use with Terraform, usually focusing on the aspect of service configuration and make it operational.
+
+    Few example of provisioners:
+
+    Run configuration management on a provisioned instance using technology like Ansible, Chef or Puppet.
+    Copying files
+    Executing remote scripts
+
+-   What terraform taint does?
+
+    terraform taint resource.id manually marks the resource as tainted in the state file. So when you run terraform apply the next time, the resource will be destroyed and recreated.
+
+-   Explain "State Locking"
+
+    State locking is a mechanism that blocks an operations against a specific state file from multiple callers so as to avoid conflicting operations from different team members. Once the first caller's operation's lock is released the other team member may go ahead to carryout his own operation. Nevertheless Terraform will first check the state file to see if the desired resource already exist and if not it goes ahead to create it.
+
+-   How do you import existing resource using Terraform import?
+
+    Identify which resource you want to import.
+    Write terraform code matching configuration of that resource.
+    Run terraform command terraform import RESOURCE ID
+    eg. Let's say you want to import an aws instance. Then you'll perform following:
+
+    Identify that aws instance in console
+    Refer to it's configuration and write Terraform code which will look something like:
+    resource "aws_instance" "tf_aws_instance" {
+      ami           = data.aws_ami.ubuntu.id
+      instance_type = "t3.micro"
+
+      tags = {
+        Name = "import-me"
+      }
+    }
+    Run terraform command terraform import aws_instance.tf_aws_instance i-12345678
+
+-   Can you name three different things included in the state file?
+
+    The representation of resources - JSON format of the resources, their attributes, IDs, ... everything that required to identify the resource and also anything that was included in the .tf files on these resources
+    Terraform version
+    Outputs
+
+-   Mention some best practices related to tfstate
+
+    Don't edit it manually. tfstate was designed to be manipulated by terraform and not by users directly.
+    Store it in secured location (since it can include credentials and sensitive data in general)
+    Backup it regularly so you can roll-back easily when needed
+    Store it in remote shared storage. This is especially needed when working in a team and the state can be updated by any of the team members
+    Enabled versioning if the storage where you store the state file, supports it. Versioning is great for backups and roll-backs in case of an issue.
+
+-   Describe how you manage state file(s) when you have multiple environments (e.g. development, staging and production)
+
+    Probably no right or wrong answer here, but it seems, based on different source, that the overall preferred way is to have a dedicated state file per environment.
+
+-   Explain what is a Terraform workspace
+
+    developer.hashicorp.com: "The persistent data stored in the backend belongs to a workspace. The backend initially has only one workspace containing one Terraform state associated with that configuration. Some backends support multiple named workspaces, allowing multiple states to be associated with a single configuration."
+
+-   Why workspaces might not be the best solution for managing states for different environemnts? like staging and production
+
+    One reason is that all the workspaces are stored in one location (as in one backend) and usually you don't want to use the same access control and authentication for both staging and production for obvious reasons. Also working in workspaces is quite prone to human errors as you might accidently think you are in one workspace, while you are working a completely different one.
+
+-   What are meta-arguments in Terraform?
+
+    Arguments that affect the lifecycle of a resources (its creation, modification, ...) and supported by Terraform regardless to the type of resource in which they are used.
+
+    Some examples:
+
+    count: how many resources to create out of one definition of a resource
+    lifecycle: how to treat resource creation or removal
+    depends_on: create a dependency between resources

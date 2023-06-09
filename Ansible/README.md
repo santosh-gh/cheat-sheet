@@ -577,4 +577,12 @@ $ ansible all -m apt -a "upgrade=dist" --become --ask-become-pass
 
 $ ansible-playbook --ask-become-pass install_apache.yaml
 
+# Important URL
 
+    https://spacelift.io/blog/
+
+  - Ansible Best Practices to Follow [Tips & Tricks]
+    https://spacelift.io/blog/ansible-best-practices
+
+  - Ansible-for-Real-life-Automation
+    https://github.com/PacktPublishing/Ansible-for-Real-life-Automation/tree/main
