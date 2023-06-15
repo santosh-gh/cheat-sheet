@@ -15,6 +15,36 @@
     https://github.com/microsoft/WhatTheHack/tree/master
 
 
+# DevOps Roadmap 2023.
+    https://github.com/milanm/DevOps-Roadmap
+
+
+# Getting started with Azure DevOps
+    https://github.com/microsoft/azuredevopslabs
+
+# Azure-Samples
+    https://github.com/Azure-Samples/app-service-and-sql-database-3-tier-with-private-networking-and-auth
+
+# Create a private Azure Kubernetes Service cluster using Terraform and Azure DevOps
+    https://learn.microsoft.com/en-us/samples/azure-samples/private-aks-cluster-terraform-devops/private-aks-cluster-terraform-devops/
+
+
+# Azure DevOps with Azure SQL and Azure Static Web App
+    https://github.com/Azure-Samples/app-sql-devops-demo-project
+
+# Deploying a Secure 3 tier application on App Service and SQL Database with ASP.NET Core, Bicep and Azure DevOps
+    https://github.com/Azure-Samples/app-service-and-sql-database-3-tier-with-private-networking-and-auth
+
+# How to install an AKS cluster with the Istio service mesh add-on via Bicep
+    https://github.com/Azure-Samples/aks-istio-addon-bicep
+
+# Securing Terraform State in Azure
+    https://techcommunity.microsoft.com/t5/fasttrack-for-azure/securing-terraform-state-in-azure/ba-p/3787254
+
+# FastTrack for Azure
+    https://techcommunity.microsoft.com/t5/fasttrack-for-azure/bg-p/FastTrackforAzureBlog
+
+
 # RESUME
     https://www.akashreddy.com/resume.html
 

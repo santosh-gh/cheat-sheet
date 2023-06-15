@@ -1979,3 +1979,13 @@ Use the meta-argument `depends_on` in the app resource definition. This way the 
     count: how many resources to create out of one definition of a resource
     lifecycle: how to treat resource creation or removal
     depends_on: create a dependency between resources
+
+-   Terraform provides several options for handling sensitive information:
+
+    Input variables: You can define sensitive variables as sensitive input variables, which will prompt for their values without displaying them in the output or logs.
+
+    Sensitive data sources: Some providers offer data sources that retrieve sensitive information without exposing it in the Terraform state.
+
+    External secret management: You can use external tools like HashiCorp Vault or AWS Secrets Manager to store and retrieve sensitive data, accessing them in Terraform via data sources or provider-specific methods.
+    
+    Encryption: Terraform supports encrypting the state using a passphrase. This helps protect sensitive data stored in the state file.
