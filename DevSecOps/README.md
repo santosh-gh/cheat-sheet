@@ -6,8 +6,8 @@
 # Phases
     - Analyze - Identify critical security challanges
     - Secure - Implement a defence strategy for that challenges
-    - Secure - Implement a defence strategy for that challenges
     - Verify - Automate the security testing for that challenge
+    - Defend - Detect attackes and protect explotes for that challenge
 
 # Plan(Analyze - Identify critical security challanges)
     - Thread Modeling (It is a cyclic process)
