@@ -1,7 +1,7 @@
 # DevSecOps
     - Continiously Access: Identify and track vulnerabilities.
     - Security: Harden resources and services with Azure Security Benchmark.
-    - Detect and resolve threats to resources, workloads and services.
+    - Defend: Detect and resolve threats to resources, workloads and services.
 
 # Phases
     - Analyze - Identify critical security challanges
