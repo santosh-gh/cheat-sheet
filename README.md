@@ -44,6 +44,8 @@
 # FastTrack for Azure
     https://techcommunity.microsoft.com/t5/fasttrack-for-azure/bg-p/FastTrackforAzureBlog
 
+# Having difficulty choosing the right load balancing solution for your web application on Azure?
+    https://techcommunity.microsoft.com/t5/fasttrack-for-azure/having-difficulty-choosing-the-right-load-balancing-solution-for/ba-p/3702615
 
 # RESUME
     https://www.akashreddy.com/resume.html
