@@ -22,7 +22,7 @@
 # Getting started with Azure DevOps
     https://github.com/microsoft/azuredevopslabs
 
-# Azure-Samples
+# Azure-Samples  
     https://github.com/Azure-Samples/app-service-and-sql-database-3-tier-with-private-networking-and-auth
 
 # Create a private Azure Kubernetes Service cluster using Terraform and Azure DevOps
@@ -46,6 +46,27 @@
 
 # Having difficulty choosing the right load balancing solution for your web application on Azure?
     https://techcommunity.microsoft.com/t5/fasttrack-for-azure/having-difficulty-choosing-the-right-load-balancing-solution-for/ba-p/3702615
+
+# Azure Machine Learning end-to-end secure setup
+    https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/machine-learning-end-to-end-secure
+
+
+# Top 7 Infrastructure as Code Open-Source Tools for 2023
+https://controlmonkey.io/blog/infrastructure-as-code-tools-for-2023/
+
+
+# Aurélie Vache's Series (Sketchnotes)
+https://dev.to/aurelievache/series
+
+
+https://dev.to/
+
+Password (Github)
+
+What the HACK
+https://microsoft.github.io/WhatTheHack/031-DevOpsWithGitHub/Student/Challenge-05.html
+
+
 
 # RESUME
     https://www.akashreddy.com/resume.html
