@@ -1989,3 +1989,11 @@ Use the meta-argument `depends_on` in the app resource definition. This way the 
     External secret management: You can use external tools like HashiCorp Vault or AWS Secrets Manager to store and retrieve sensitive data, accessing them in Terraform via data sources or provider-specific methods.
     
     Encryption: Terraform supports encrypting the state using a passphrase. This helps protect sensitive data stored in the state file.
+
+
+    # Terraform Best Practices: The 24 Practices You Should Adopt
+      https://www.clickittech.com/devops/terraform-best-practices/
+
+    # Terraform on Azure Pipelines Best Practices
+      https://julie.io/writing/terraform-on-azure-pipelines-best-practices/
+

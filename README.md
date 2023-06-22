@@ -88,3 +88,13 @@ Tasks
 
 Cloud & DevOps
 Real-Time Examples
+
+
+# Create Resource Group
+az group create -n tfstates -l eastus2
+
+# Create Storage Account
+az storage account create -n kstfstateaccount -g tfstates -l eastus2 --sku Standard_LRS
+
+# Create Storage Account Container
+az storage container create -n tfstate --account-name kstfstateaccount
