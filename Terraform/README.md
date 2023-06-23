@@ -1997,3 +1997,11 @@ Use the meta-argument `depends_on` in the app resource definition. This way the 
     # Terraform on Azure Pipelines Best Practices
       https://julie.io/writing/terraform-on-azure-pipelines-best-practices/
 
+
+    # Terraform CI-CD With Azure DevOps
+      https://blog.opstree.com/2022/06/28/terraform-ci-cd-with-azure-devops/
+      https://github.com/himanshumudgal08/terraform-CICD/wiki
+
+    # Top 7 Infrastructure as Code Open-Source Tools for 2023
+      https://controlmonkey.io/blog/infrastructure-as-code-tools-for-2023/
+
