@@ -1,6 +1,6 @@
 # What is Taints and tolerations? Give example
 
-    In the context of Kubernetes, "taints and tolerations" are mechanisms used to control the scheduling and placement of pods (the smallest and most basic unit of deployment in Kubernetes) on nodes within a cluster.
+    In the context of Kubernetes, "taints and tolerations" are mechanisms used to control the scheduling and placement of pods on nodes within a cluster.
 
     Taints: A taint is a label applied to a node in a Kubernetes cluster that indicates a specific characteristic or restriction. Taints are used to mark nodes as "unpreferred" or "unavailable" for certain types of pods. By default, nodes do not have any taints applied to them. Taints prevent pods that do not tolerate those taints from being scheduled on the tainted nodes.
 
@@ -102,3 +102,53 @@
 
     Note that node selectors are a simple way to specify pod placement, but they have limitations. For more advanced scheduling requirements, you might need to explore other concepts like node affinity or node taints and tolerations.
 
+
+# Differentiate between node selectors vs Node affinity
+
+    Node selectors and node affinity are both mechanisms in Kubernetes that allow you to control the scheduling and placement of pods onto specific nodes in a cluster. However, they differ in terms of flexibility and granularity.
+
+    Node Selectors:
+    Node selectors are a simple and straightforward way to schedule pods onto nodes based on node labels. With node selectors, you can assign a label to each node in the cluster, and then specify a node selector for a pod to indicate the requirements for the node it should be scheduled on. Here's an example:
+
+    apiVersion: apps/v1
+    kind: Pod
+    metadata:
+    name: my-pod
+    spec:
+    nodeSelector:
+        disktype: ssd
+    containers:
+    - name: my-container
+        image: nginx
+    In this example, the pod specifies a nodeSelector that requires the pod to be scheduled on a node with the label disktype=ssd. Kubernetes will schedule the pod only on nodes that match this label.
+
+    Node selectors are limited in terms of expressiveness since they only allow for simple equality-based matching on node labels. They do not support more complex rules or preferences.
+
+    Node Affinity:
+    Node affinity, on the other hand, provides more flexibility and fine-grained control over pod scheduling. With node affinity, you can define complex rules and preferences to specify the conditions under which a pod should be scheduled on a node. Node affinity rules support operators like In, NotIn, Exists, DoesNotExist, and more. You can also use multiple expressions to create more nuanced scheduling requirements. Here's an example:
+
+    apiVersion: apps/v1
+    kind: Pod
+    metadata:
+    name: my-pod
+    spec:
+    affinity:
+        nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+            - key: disktype
+                operator: In
+                values:
+                - ssd
+            - key: environment
+                operator: NotIn
+                values:
+                - development
+    containers:
+    - name: my-container
+        image: nginx
+    
+    In this example, the pod has a node affinity rule that requires the pod to be scheduled on nodes with the label disktype=ssd and excludes nodes with the label environment=development. This rule provides more granular control over pod placement compared to node selectors.
+
+    Node affinity is more powerful and flexible than node selectors, allowing you to define complex rules and preferences for pod scheduling based on node labels. However, it also requires more careful configuration and understanding of the available operators and expressions.
