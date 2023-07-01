@@ -6,7 +6,7 @@
   |
   |-- charts
   |
-  |-- templates|
+  |-- templates
   |   |-- NOTES.txt
   |   |
   |   |-- _helpers.tpl
@@ -16,9 +16,9 @@
   |   |-- ingress.yaml
   |   |
   |   |-- service.yaml
-  |   |
+  |   
   |-- values.yaml
-  
+
 
   templates/ contains the templated kubernetes objetcs
 
