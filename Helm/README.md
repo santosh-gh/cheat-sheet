@@ -1,15 +1,24 @@
 # Helm Chart Structure
 
   mychart
+  |
   |-- Chart.yaml
+  |
   |-- charts
-  |-- templates
+  |
+  |-- templates|
   |   |-- NOTES.txt
+  |   |
   |   |-- _helpers.tpl
+  |   |
   |   |-- deployment.yaml
+  |   |
   |   |-- ingress.yaml
+  |   |
   |   |-- service.yaml
+  |   |
   |-- values.yaml
+  
 
   templates/ contains the templated kubernetes objetcs
 
@@ -20,7 +29,7 @@
   charts/ directory is used to define sub-charts
 
   .helmignore to list the files not included in the helm chart package
-  
+
 
 # What is _helpers TPL in helm?
 
