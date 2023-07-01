@@ -47,20 +47,20 @@
   or performing computations based on chart values.
 
   Here's a simple example of what _helpers.tpl might look like:
-  
+
 
 
   File: _helpers.tpl
 
-  {{/* Define a custom function to generate a label */}}
+    {{/* Define a custom function to generate a label */}}
 
-  {{- define "mychart.labels" -}}
+    {{- define "mychart.labels" -}}
 
-    app: {{ default .Values.appName "my-app" }}
+      app: {{ default .Values.appName "my-app" }}
 
-    release: {{ .Release.Name }}
+      release: {{ .Release.Name }}
 
-  {{- end }}
+    {{- end }}
 
 
   You can then use this custom label generation function in other templates like this:
@@ -68,23 +68,23 @@
 
   File: deployment.yaml
 
-  apiVersion: apps/v1
+    apiVersion: apps/v1
 
-  kind: Deployment
+    kind: Deployment
 
-  metadata:
+    metadata:
 
-    name: {{ .Release.Name }}
+      name: {{ .Release.Name }}
 
-    labels:
+      labels:
 
-      {{ include "mychart.labels" . | nindent 4 }}
+        {{ include "mychart.labels" . | nindent 4 }}
 
-  spec:
+    spec:
 
-    replicas: {{ .Values.replicas }}
+      replicas: {{ .Values.replicas }}
 
-    # ...
+      # ...
 
 
   This way, you keep your templates clean, modular, and easy to manage.
