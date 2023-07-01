@@ -2005,3 +2005,6 @@ Use the meta-argument `depends_on` in the app resource definition. This way the 
     # Top 7 Infrastructure as Code Open-Source Tools for 2023
       https://controlmonkey.io/blog/infrastructure-as-code-tools-for-2023/
 
+    # Terraform Template for Azure DevOps
+      https://www.libredevops.org/quickstart/utils/pipelines/azdo/azdo-example-terraform-template.html
+
