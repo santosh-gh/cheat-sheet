@@ -12,10 +12,15 @@
   |-- values.yaml
 
   templates/ contains the templated kubernetes objetcs
+
   values.yaml contains the default values of the chart
+
   Chart.yaml contains a description of the chart
+
   charts/ directory is used to define sub-charts
+
   .helmignore to list the files not included in the helm chart package
+  
 
 # What is _helpers TPL in helm?
 
