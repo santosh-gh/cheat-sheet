@@ -1,3 +1,6 @@
+
+
+
 # DevSecOps
     - Continiously Access: Identify and track vulnerabilities.
     - Security: Harden resources and services with Azure Security Benchmark.
@@ -56,3 +59,31 @@
         2. Web Application Firewall (WAF)
             - Azure Application Gateway WAF
         3. Network Intrusion Detection and Prevention (IDS/IPS)
+
+
+# Examples of DevSecOps tools include:
+
+• Security scanning tools to detect vulnerabilities
+  Synk
+
+• Container security solutions to secure containers
+
+• CI/CD tools to streamline the development process
+
+• Software composition analysis tools to identify open source components
+
+• Secure coding tools to ensure code quality
+
+• Security policy management tools to ensure that policies are enforced
+
+
+# Requirements  - Threat Modelling 
+# Design        - Threat Modelling 
+
+# Development   - Static Code Analysis 
+# Build         - Vulnerability Scans
+# Test          - Penetration Tests 
+# Release       - Compliance Testing
+
+# Deployment    - Monitoring
+# Operate       - Monitoring

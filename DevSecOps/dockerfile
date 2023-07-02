@@ -1,0 +1,74 @@
+FROM docker/whalesay:latest
+RUN apt-get -y -qq update
+RUN apt-get install -qq -y fortunes
+CMD /usr/games/fortune -a | cowsay
+
+kubectl run hello-kiamol --image=kiamol/ch02-hello-kiamol --restart=Never      	
+
+# wait for the pod to be ready:
+kubectl wait --for=condition=Ready pod hello-kiamol
+
+kubectl get pod hello-kiamol --output customcolumns=NAME:metadata.name,NODE_IP:status.hostIP,POD_IP:status.podIP
+kubectl get pod hello-kiamol -o jsonpath='{.status.containerStatuses[0].containerID}'
+
+docker container rm -f $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
+
+docker container ls -q --filter label=io.kubernetes.container.name=hellokiamol
+
+kubectl get deploy hello-kiamol-2 -o jsonpath='{.spec.template.metadata.labels}'
+
+kubectl get pods -l app -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
+
+kubectl get pods -l app -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
+
+kubectl apply -f https://raw.githubusercontent.com/sixeyed/kiamol/master/ch02/pod.yaml
+
+kubectl get pod hello-kiamol -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+
+wget -O —http://localhost | head -n 4
+
+docker container logs --tail=2 $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
+
+kubectl exec deploy/hello-kiamol-4 -- sh -c 'wget -O—http://localhost >/dev/null'
+
+kubectl cp hello-kiamol:/usr/share/nginx/html/index.html /tmp/kiamol/ch02/index.html
+
+kubectl get pod -l app=sleep-2 --output jsonpath='{.items[0].status.podIP}'
+
+kubectl exec deploy/sleep-1 -- ping -c 2 $(kubectl get pod -l app=sleep-2 --output jsonpath='{.items[0].status.podIP}')
+
+kubectl get pod -l app=sleep-2 --output jsonpath='{.items[0].status.podIP}'
+
+kubectl get pod -l app=sleep-2 --output jsonpath='{.items[0].status.podIP}
+
+kubectl get pod -l app=numbers-api -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+
+kubectl get svc numbers-web -o jsonpath='http://{.status.loadBalancer.ingress[0].*}:8080'
+
+kubectl exec deploy/sleep-1 -- sh -c 'nslookup numbers-api | tail -n 5'
+
+kubectl exec deploy/sleep-1 -- sh -c 'nslookup numbers-api | grep "^[^*]"'
+
+kubectl exec deploy/sleep-1 -- sh -c 'nslookup numbersapi.default.svc.cluster.local | grep "^[^*]"'
+
+kubectl exec deploy/sleep-1 -- sh -c 'nslookup kube-dns.kubesystem.svc.cluster.local | grep "^[^*]"'
+
+kubectl create configmap sleep-config-literal --from-literal=kiamol.section='4.1'
+
+kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
+
+kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
+kubectl get svc todo-web -o jsonpath='http://{.status.loadBalancer.ingress[0].*}:8080'
+kubectl create secret generic sleep-secret-literal --fromliteral=secret=shh...
+
+kubectl describe secret sleep-secret-literal
+
+kubectl get secret sleep-secret-literal -o jsonpath='{.data.secret}'
+kubectl get secret sleep-secret-literal -o jsonpath='{.data.secret}' | base64 -d
+
+kubectl get secret todo-db-secret-test -o jsonpath='{.data.POSTGRES_PASSWORD}'
+
+kubectl get secret todo-db-secret-test -o jsonpath='{.metadata.annotations}'
+
+kubectl exec deploy/todo-db -- sh -c 'ls -l $(readlink -f /secrets/postgres_password)'
+
