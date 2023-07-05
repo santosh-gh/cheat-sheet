@@ -1,3 +1,29 @@
+# What are the main componets of Kubernetes Architecture 
+    In high level it is divided into two parts
+    - Control Plane (API Server, Scheduler, etcd, Controler Manager, Cloud Control Manager)
+    - Data Plane (Kubelet, Kube-Proxy, Container Runtime)
+
+# What is use of Service in Kubernetes?
+    - Load Balancing
+    - Service Discovery (using Labels and Selectors)
+    - Expose to external world/network
+
+# Service Types
+    - Cluster IP - (Pods can be accessed inside cluster)
+    - NodePort - (Pods can be accessed inside organization)
+    - Loadbalancer - (Pods can be accessed from external world)
+
+# Docker Vs Kubernetes
+  - Docker: Docker is a container platform 
+            Single host, No auto healing/scaling, No Enterprise support
+
+  - Kubernetes: Kubernetes is container orchestration platform with capabilities 
+                Auto scaling
+                Auto healing
+                Clustering (Multi host/node)
+                Enterprise level suport (Load Balancing)
+
+
 # What is Taints and tolerations? Give example
 
     In the context of Kubernetes, "taints and tolerations" are mechanisms used to control the scheduling and placement of pods on nodes within a cluster.
