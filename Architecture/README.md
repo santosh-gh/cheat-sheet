@@ -88,6 +88,78 @@
     and update domains for maximum availability.
 
   - Leverage Azure managed services: 
-  
+
     Utilize fully managed services like Azure SQL Database, Azure Cosmos DB, and Azure Functions, which are designed 
     with  built-in redundancy and high availability.
+
+# Traffic Manager Vs Front Door
+
+  - Azure Traffic Manager:
+
+    Azure Traffic Manager is a DNS-based traffic load balancer that distributes user traffic across multiple endpoints, 
+    such as Azure web apps, cloud services, or external endpoints. 
+    
+    It operates at the DNS level, directing client requests to the most appropriate endpoint based on configurable 
+    traffic-routing methods. 
+    
+    Traffic Manager can be useful for scenarios like global load balancing, disaster recovery, and endpoint health 
+    monitoring.
+
+    Key features of Azure Traffic Manager include:
+
+    - Load balancing based on performance, geography, or priority.
+
+    - Health monitoring of endpoints using probes.
+
+    - Automatic failover to healthy endpoints.
+
+    - Customizable traffic-routing methods.
+
+    - Geographic traffic routing to distribute traffic based on user location.
+    
+    
+  - Azure Front Door:
+
+    Azure Front Door is a global, scalable content delivery network (CDN) that acts as an intelligent entry point for 
+    your applications. 
+
+    It combines the functionality of a content delivery network, application gateway, and web application firewall. 
+
+    Front Door is designed to improve the performance, availability, and security of your web applications by routing 
+    traffic to the closest backend server, caching content at the edge, and protecting against distributed denial-of-service 
+    (DDoS) attacks.
+
+    Key features of Azure Front Door include:
+
+    - Global load balancing to route traffic to the nearest backend server.
+
+    - Accelerated content delivery through edge caching.
+
+    - SSL termination at the edge to reduce backend server load.
+
+    - Web Application Firewall (WAF) protection against malicious traffic.
+
+    - DDoS protection to safeguard applications from attacks.
+
+    - URL-based routing and redirection.
+
+  - Comparison:
+
+    Traffic Manager primarily focuses on DNS-based traffic routing, while Front Door combines CDN capabilities with 
+    traffic management.
+    
+    Traffic Manager offers more flexible traffic-routing methods based on performance, geography, or priority, whereas 
+    Front Door provides more advanced features for improving application performance, such as edge caching and SSL termination.
+    
+    Front Door includes built-in security features like Web Application Firewall (WAF) and DDoS protection, which 
+    are not available in Traffic Manager.
+    
+    Traffic Manager is better suited for scenarios where you need to distribute traffic across multiple endpoints, 
+    while Front Door is more suitable for 
+    
+    improving application performance and security.
+    
+    In summary, if your primary goal is to distribute traffic across multiple endpoints, Azure Traffic Manager is a 
+    good choice. On the other hand, if you're looking for a comprehensive solution that includes content delivery, 
+    traffic management, and security features, Azure Front Door provides a more robust set of capabilities.
+
