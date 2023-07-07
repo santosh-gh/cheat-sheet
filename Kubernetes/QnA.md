@@ -3,6 +3,21 @@
     - Control Plane (API Server, Scheduler, etcd, Controler Manager, Cloud Control Manager)
     - Data Plane (Kubelet, Kube-Proxy, Container Runtime)
 
+# Docker Swarm Vs Kubernetes
+    - Docker Swarm: Sutable for small/mid organization
+
+    - Kubernets: Beter suted for large organization as it offers 
+                 more scalabilities
+                 more networking capabilities like polices
+                 third party ecosystem support   
+# Container Vs Pod
+    - Contaner:
+    - Pod: A pod in kubernetes is a runtime specification of a container in docker 
+           It is a declarative way of defining a container in the form of a YAML file.
+           It can run more than one container in a pod 
+# What id a Namespace in K8s?
+    - Is a logical isolation of resources, network polices, rbac etc
+
 # What is use of Service in Kubernetes?
     - Load Balancing
     - Service Discovery (using Labels and Selectors)
