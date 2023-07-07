@@ -183,9 +183,22 @@
   - Geo-Replication: 
     Azure SQL Database offers built-in geo-replication capabilities to enable efficient disaster recovery. Organizations 
     can configure geo-replication to replicate their databases asynchronously to a secondary region, providing a standby 
-    database in case of a regional outage or disaster. The secondary database remains synchronized with the primary database, e
-    nsuring data consistency. In the event of a failure in the primary region, failover can be initiated to promote the
+    database in case of a regional outage or disaster. The secondary database remains synchronized with the primary database, 
+    ensuring data consistency. In the event of a failure in the primary region, failover can be initiated to promote the
     secondary database as the new primary, minimizing downtime and enabling seamless application continuity.
+
+    To improve the high availability, A SQL Server failover group has created for the two SQL servers running on 
+    those two regions. Azure SQL failover group makes sure that your database up and running all the time even 
+    though the primary database becomes unavailable due to an outage of the primary region. When your database 
+    of the primary region running without an issue, the primary region’s database works in read-write mode and 
+    your secondary region’s database works in read-only mode. All the database updates that you make to the primary 
+    database will replicate to the secondary region’s database asynchronously. However, If your primary 
+    region’s(Southeast Asia) database becomes unavailable, failover will trigger and the database of the secondary 
+    region(East Asia) will become the primary database and will work in read-write mode. When the failed region is 
+    restored and back online, the database in East Asia is immediately synchronized with the database in Southeast 
+    Asia region, and the read-only listener is switched back to the secondary database in East Asia. During 
+    synchronization performance of the primary could be slightly impacted depending on the amount of data that 
+    needs to be synchronized. To achieve this, no changes are required in your application source code.
 
   - Multiple Redundancy Options: 
     Azure SQL Database provides multiple redundancy options to ensure high availability and fault tolerance. These options 
