@@ -9,6 +9,7 @@
 # High Availability within Azure Regions
   
   - Availibity zones (Implementing redundancy)
+  
     Azure regions are divided into multiple Availability Zones, each having independent power 
     and networking infrastructure.
 
