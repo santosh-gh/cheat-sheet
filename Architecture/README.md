@@ -9,7 +9,7 @@
 # High Availability within Azure Regions
   
   - Availibity zones (Implementing redundancy)
-  
+
     Azure regions are divided into multiple Availability Zones, each having independent power 
     and networking infrastructure.
 
@@ -67,3 +67,22 @@
     region and enabling rapid failover in the event of a regional outage. 
     
     ASR also provides automated recovery plans and testing capabilities to validate the resiliency of the solution.
+
+# Best Practices for High Availability Architecture:
+
+  - Design for fault tolerance: 
+    Utilize redundant resources and architectures to eliminate single points of failure and improve resilience.
+
+  - Implement automated monitoring and alerting: 
+    Continuously monitor the health of resources and set up alerts to proactively respond to any issues.
+
+  - Regularly test failover and disaster recovery processes: 
+    Conduct periodic testing to validate the effectiveness of failover mechanisms and ensure  proper recovery.
+
+  - Use Azure Availability Sets: 
+    Deploy virtual machines into Availability Sets to ensure that they are spread across different fault domains 
+    and update domains for maximum availability.
+
+  - Leverage Azure managed services: 
+    Utilize fully managed services like Azure SQL Database, Azure Cosmos DB, and Azure Functions, which are designed 
+    with  built-in redundancy and high availability.
