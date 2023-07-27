@@ -50,10 +50,10 @@
   $ export ARM_TENANT_ID="tenant"
 
 # PowerShell
-  $env:ARM_TENANT_ID = "tenantId"
-  $env:ARM_SUBSCRIPTION_ID = "subscriptionId"
-  $env:ARM_CLIENT_ID = "appId"
-  $env:ARM_CLIENT_SECRET = "password"
+  $env:ARM_TENANT_ID = "ec3ded2c-750b-415f-b382-96464321f3cf"
+  $env:ARM_SUBSCRIPTION_ID = "b798c28b-e334-4ecf-b338-ec314ced3616"
+  $env:ARM_CLIENT_ID = "933d8a89-8fdb-41cc-b9d2-b7078cd02e2e"
+  $env:ARM_CLIENT_SECRET = "N0W8Q~CmpAWlghgL3xxTwCPBB1a4wyqIxTKY3cc9"
 
 # main.tf
 

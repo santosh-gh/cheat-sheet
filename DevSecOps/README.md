@@ -1,6 +1,4 @@
 
-
-
 # DevSecOps
     - Continiously Access: Identify and track vulnerabilities.
     - Security: Harden resources and services with Azure Security Benchmark.
@@ -87,3 +85,13 @@
 
 # Deployment    - Monitoring
 # Operate       - Monitoring
+
+# DevSecOps Practice
+  - Pre-Commit Hooks - OWASP
+  - Source Composition Analysis (SCA) - Identifies all open source libraries and extensions used in a code base. Safety, Snyk
+  - Static App Security Testing (SAST) - Fortify, SonarQube, BlackDuck, Snyk, Veracode
+  - Dynamic App Security Testing (DAST) - AppScan, Checkmarx
+  - Security in Infrastucture as a Code
+  - Secret Management
+
+

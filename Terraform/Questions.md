@@ -13,13 +13,20 @@ Terraform is a powerful tool for managing infrastructure deployments, enabling y
     }
     }
 
-    By utilizing null_resource, you can extend the capabilities of Terraform to perform additional tasks or integrations that are not directly supported by the built-in resource types and providers.
+    By utilizing null_resource, you can extend the capabilities of Terraform to perform additional tasks or integrations that are 
+    not directly supported by the built-in resource types and providers.
 
-    In this example, we define a null_resource block named "example." Within this block, we specify a provisioner of type local-exec. The local-exec provisioner executes a local command, in this case, the command echo Hello, Terraform!.
+    In this example, we define a null_resource block named "example." Within this block, we specify a provisioner of type local-exec. 
+    The local-exec provisioner executes a local command, in this case, the command echo Hello, Terraform!.
 
-    When running terraform apply, Terraform will create an instance of the null_resource but won't perform any actions related to infrastructure management. However, it will execute the specified provisioner, which in this case will print "Hello, Terraform!" to the console.
+    When running terraform apply, Terraform will create an instance of the null_resource but won't perform any actions related 
+    to infrastructure management. However, it will execute the specified provisioner, which in this case will print "Hello, 
+    Terraform!" to the console.
 
-    The null_resource can be useful in various scenarios, such as running local commands for setup or configuration, generating local files, invoking external scripts, or interacting with APIs that don't have a dedicated Terraform provider. It provides flexibility and extensibility within Terraform configurations while allowing you to integrate with other systems or perform custom actions during deployments.
+    The null_resource can be useful in various scenarios, such as running local commands for setup or configuration, generating 
+    local files, invoking external scripts, or interacting with APIs that don't have a dedicated Terraform provider. 
+    It provides flexibility and extensibility within Terraform configurations while allowing you to integrate with other 
+    systems or perform custom actions during deployments.
 
 # Explain what modules are in Terraform.
 
@@ -46,9 +53,13 @@ Terraform is a powerful tool for managing infrastructure deployments, enabling y
 
 # local-exec Vs remote-exec
 
-    The local-exec provisioner invokes a local executable after a resource is created. This invokes a process on the machine running Terraform, not on the resource. In Terraform, the local-exec provisioner is used to run commands or scripts on the machine where Terraform is being executed. It allows you to perform actions that are not directly supported by Terraform's native resource types or providers.
+    The local-exec provisioner invokes a local executable after a resource is created. This invokes a process on the machine running Terraform, 
+    not on the resource. In Terraform, the local-exec provisioner is used to run commands or scripts on the machine where Terraform is being executed. 
+    It allows you to perform actions that are not directly supported by Terraform's native resource types or providers.
     
-    In Terraform, the remote-exec provisioner is a feature that allows you to run commands on a remote resource, such as a virtual machine or an instance, after it has been created or updated. It is a powerful tool for performing configuration management tasks or executing custom scripts on the remote resource.
+    In Terraform, the remote-exec provisioner is a feature that allows you to run commands on a remote resource, such as a virtual machine 
+    or an instance, after it has been created or updated. It is a powerful tool for performing configuration management tasks or 
+    executing custom scripts on the remote resource.
 
 # What are sub-graphs in Terraform?
 
@@ -133,11 +144,28 @@ Terraform is a powerful tool for managing infrastructure deployments, enabling y
 
 # Can you explain the difference between a Terraform provider and a Terraform module?
 
-- Terraform Provider:
+  - Terraform Provider:
+
     A Terraform provider is responsible for managing the lifecycle of a particular infrastructure platform or service. It is essentially a plugin that allows Terraform to interact with and manage resources on a specific platform. Providers can be created by the community or the platform providers themselves. Examples of popular providers include AWS (Amazon Web Services), Azure (Microsoft Azure), GCP (Google Cloud Platform), and many others. Each provider has its own set of resources and configurations that can be managed using Terraform.
 
-- Terraform Module:
+  - Terraform Module:
+
     A Terraform module is a reusable set of Terraform configurations that represent a specific infrastructure component or a collection of related resources. Modules allow you to encapsulate infrastructure code and define reusable building blocks that can be shared across different projects or environments.
+
+# Terraform Lifecycle
+  In Terraform, the lifecycle block allows you to define various settings and behaviors related to resource 
+  lifecycle management.
+
+    resource "aws_instance" "example" {
+        # Resource configuration
+
+        lifecycle {
+            create_before_destroy = true
+            prevent_destroy       = false
+            ignore_changes        = ["tags"]
+            delete_before_replace = false
+        }
+    }
 
 
 # How do you manage Terraform state, and what are some best practices for state management in a team environment?
