@@ -5,3 +5,6 @@
 
 # Deploying Terraform at scale with GitHub Actions
     https://gaunacode.com/deploying-terraform-at-scale-with-github-actions
+
+# GitHub Actions: The Full Course - Learn by Doing!
+    https://www.youtube.com/watch?v=-hVG9z0fCac&list=PLArH6NjfKsUhvGHrpag7SuPumMzQRhUKY&index=1
