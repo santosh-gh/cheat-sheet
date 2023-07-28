@@ -24,6 +24,7 @@
 
   - Events (Pull Request, Push to a branch,Create Issue, Close Issue)
 
+  
   - Workflow 
     - Job1
       - Step1: Action
@@ -39,3 +40,22 @@
 
   - Steps does not run in parallel, it run in sequential
   - Jobs Run in parallel
+
+
+  - The basic attributes we use in any workflow are:
+
+    name — The name of your workflow (optional)
+
+    on — GitHub event that triggers the flow. It can be repository events (push, pull requests, release) or webhooks, branch creation, issues, or members joining the repository.
+
+    jobs — Workflows must have at least one job. Each job must have an identifier, it’s like a name for the task we perform say “build”, “test” etc.
+
+    runs-on — The type of machine needed to run the job. These environments are called Runners. Some of them are windows server 2019, ubuntu 18.04, macOS Catalina 10.15, etc.
+
+    steps — a list of all the commands or actions. Each step runs its process.
+
+    uses — identifies an action to use, defines the location of that action. An action can be uploading and downloading artifacts or checkout or configure any cloud account. You can find various actions at GitHub MarketPlace, with categories including Continuous Integration, Deployment, Project management, Testing, Security, etc. I really suggest you to explore various actions, also we can publish our custom actions on the Marketplace.
+
+    run — runs the command in the virtual environment shell.
+    
+    name — an optional name identifier for the step.

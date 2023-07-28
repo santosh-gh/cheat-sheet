@@ -13,3 +13,6 @@
 
 # How to install minikube on windows 10 with VirtualBox | Minikube Cluster Setup Demo| Part 5
   https://www.youtube.com/watch?v=0lczMJJ7ldc
+
+# Kubernetes Basics (Important)
+  https://github.com/learning-zone/docker-and-kubernetes-basics/blob/master/kubernetes.md

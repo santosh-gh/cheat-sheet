@@ -8,3 +8,6 @@
 
 # GitHub Actions: The Full Course - Learn by Doing!
     https://www.youtube.com/watch?v=-hVG9z0fCac&list=PLArH6NjfKsUhvGHrpag7SuPumMzQRhUKY&index=1
+
+# How to Setup a CI/CD Pipeline with GitHub Actions and AWS
+https://www.freecodecamp.org/news/how-to-setup-a-ci-cd-pipeline-with-github-actions-and-aws/
