@@ -10,11 +10,11 @@ https://www.youtube.com/watch?v=P7XYkBsihrw&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7
 # Launch a Linux EC2 Instance and configure security group.
 
 # Update the installed packages
-  sudo su
-  yum update
+  sudo su yum update
 
 # Install Java 8
   java -version
+
   yum install java-1.8.0
 
 # Install Jenkins
@@ -60,11 +60,11 @@ https://www.youtube.com/watch?v=P7XYkBsihrw&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7
 # Configure Jenkins
   1.) Access Jenkins through browser
 
-  http://YOUR-SERVER-PUBLIC-IP:8080
+      http://YOUR-SERVER-PUBLIC-IP:8080
 
   2.) Now copy the default admin password and paste it to unblock the Jenkins
 
-  cat /var/lib/jenkins/secrets/initialAdminPassword
+      cat /var/lib/jenkins/secrets/initialAdminPassword
 
   3.) Choose install suggested plugins  
 
