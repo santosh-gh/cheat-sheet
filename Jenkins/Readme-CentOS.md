@@ -1,9 +1,3 @@
-Complete Real-time DevOps CI/CD Project | Jenkins Shared Lib | DevSecOps | Advanced Pro |  HandsOn 
-https://www.youtube.com/watch?v=g-v9AsubOqY&t=52s
-
-https://www.youtube.com/watch?v=P7XYkBsihrw&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7G8E&index=6
-
-
 # Install Jenkins on AWS EC2 Instance
   Jenkins is an open source automation server written in Java. Basically, Jenkins provides a continuous integration (CI) and continuous delivery (CD) solution to accelerate the software delivery process.
 
