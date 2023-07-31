@@ -15,3 +15,8 @@
 # Jenkins
   https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 
+# Jenkins Introduction
+  https://www.youtube.com/watch?v=c-OZcpHiOPc&list=PL87padGs1bp9X95IxGQtFW44qWzywhbHM&index=1
+
+# DevOps Project Setup By Mr. Ashok 
+  https://www.youtube.com/watch?v=qJ8gUp0O25k
