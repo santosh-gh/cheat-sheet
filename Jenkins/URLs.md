@@ -6,6 +6,8 @@
 
   https://www.youtube.com/watch?v=P7XYkBsihrw&list=PLLu1bCv5AByGUZUl4N2fhZdtHg0pd7G8E&index=6
 
+  https://www.youtube.com/watch?v=ct_ZkMG7S8g&list=PLLu1bCv5AByHRrefBHKLDltkFK8MHGgwz
+
 # Amazon Web Services (AWS) Tutorial
   https://www.geeksforgeeks.org/aws-tutorial/?ref=lbp
 
@@ -19,4 +21,9 @@
   https://www.youtube.com/watch?v=c-OZcpHiOPc&list=PL87padGs1bp9X95IxGQtFW44qWzywhbHM&index=1
 
 # DevOps Project Setup By Mr. Ashok 
-  https://www.youtube.com/watch?v=qJ8gUp0O25k
+https://www.youtube.com/watch?v=qJ8gUp0O25k
+
+# Master DevOps Engineering With Hands-On Tutorials - DINESH
+  https://www.youtube.com/@dineshmistry
+
+  https://docs.dman.cloud/tutorial-documentation/install-jenkins/
