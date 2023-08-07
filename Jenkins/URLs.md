@@ -27,3 +27,7 @@ https://www.youtube.com/watch?v=qJ8gUp0O25k
   https://www.youtube.com/@dineshmistry
 
   https://docs.dman.cloud/tutorial-documentation/install-jenkins/
+
+# DevOpsCube
+  https://devopscube.com/linux-shell-scripting-for-devops/
+  https://devopscube.com/jenkins-2-tutorials-getting-started-guide/

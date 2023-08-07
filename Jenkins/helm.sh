@@ -7,3 +7,5 @@ chmod 700 get_helm.sh
 
 echo "checking version.."
 helm version
+
+
