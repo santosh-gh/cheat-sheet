@@ -1,0 +1,46 @@
+10 tips for optimizing SQL queries:
+
+1. Use Indexes: Properly indexing your tables can greatly speed up retrieval times. Remember, though, that too many indexes can slow down updates and inserts.
+
+2. Avoid SELECT: Instead of selecting all columns with `SELECT *`, only fetch the columns you need.
+
+3. Limit Results: If you're only interested in a subset of results, use the `LIMIT` clause to reduce the number of rows returned.
+
+4. Optimize Joins: Ensure you're joining tables on indexed columns and avoid using many outer joins which can be more costly than inner joins.
+
+5. Avoid N+1 Problems: This refers to the problem where you're making a new SQL call for each item in a previous result set. Instead, try to retrieve all the information you need in a single query.
+
+6. Reduce Subqueries: Subqueries can often be optimized using joins or derived tables.
+
+7. Analyze Your Query: Most databases have an `EXPLAIN` command (or similar) which shows how a query will be executed. This can help you spot inefficiencies.
+
+8. Avoid Functions in WHERE Clause: Using functions on columns in the WHERE clause (e.g., `WHERE UPPER(name) = 'JON'`) can prevent the use of indexes.
+
+9. Optimize Database Schema: Denormalization, or adding redundant data to avoid complex joins or calculations, can sometimes increase performance. However, it can also increase complexity and the potential for data inconsistency, so it's a trade-off.
+
+10. Cache Results: If certain queries are executed frequently with the same data, consider caching the results to avoid hitting the database repeatedly.
+
+
+def
+evenodd
+(
+num
+):
+'''evenodd Function :- This function will test whether a numbr is Even or Odd
+if
+num
+%
+2
+==
+0
+:
+print
+(
+"Even Number"
+)
+else
+:
+print
+(
+"Odd Number"
+)
