@@ -1,0 +1,35 @@
+How to use CI/CD integration to automate the deploy of a Synapse Workspace to multiple environments
+
+https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/how-to-use-ci-cd-integration-to-automate-the-deploy-of-a-synapse/ba-p/2248060
+
+
+Streamlining Synapse CI/CD & Dedicated SQL pool with Azure DevOps: Best Practices and Implementation Tips
+https://kunaldaskd.medium.com/streamlining-synapse-ci-cd-dedicated-sql-pool-with-azure-devops-best-practices-and-59746afe022f
+
+
+Creating an Azure DevOps CI/CD Pipeline for your Kubernetes Microservice Application
+https://medium.com/microsoftazure/creating-an-azure-devops-ci-cd-pipeline-for-your-kubernetes-microservice-application-450d90bf58df
+
+
+Azure Synapse Studio CICD using YAML pipelines
+https://techcommunity.microsoft.com/t5/azure-synapse-analytics-blog/azure-synapse-studio-cicd-using-yaml-pipelines/ba-p/3045553
+
+
+Integration Testing Azure Synapse Analytics Pipelines and beyond!
+https://medium.com/microsoftazure/integration-testing-azure-synapse-pipelines-and-beyond-876771e77bd7
+
+
+Azure Synapse Serverless- A better approach to GIT integration and Pull Request reviews using Azure Devops
+https://medium.com/@saurabh.dasgupta1/azure-synapse-serverless-a-better-approach-to-git-integration-and-pull-request-reviews-using-azure-27bce57d3d6f
+
+Azure Synapse Analytics CI/CD with Custom Parameters - Made Easy!
+https://techcommunity.microsoft.com/t5/fasttrack-for-azure/azure-synapse-analytics-ci-cd-with-custom-parameters-made-easy/ba-p/3802517
+
+https://github.com/santiagxf/synapse-cicd
+Azure Synapse CI/CD pipelines with GitHub Actions or Azure DevOps Pipelines
+
+CI CD in Azure Synapse Analytics Part 1/2/3/4
+https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-1/ba-p/1964172
+https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-2/ba-p/1991060
+https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-3/ba-p/1993201
+https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-4-the-release-pipeline/bc-p/2978755/highlight/true
