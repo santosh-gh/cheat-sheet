@@ -3,3 +3,7 @@ https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/
 
 Azure Bicep: Getting started guide
 https://4sysops.com/archives/azure-bicep-getting-started-guide/
+
+
+A gentle introduction to Bicep
+https://tonesandtones.github.io/introducing-bicep/
