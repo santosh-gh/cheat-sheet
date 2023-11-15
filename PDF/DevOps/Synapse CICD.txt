@@ -33,3 +33,8 @@ https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-syn
 https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-2/ba-p/1991060
 https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-3/ba-p/1993201
 https://techcommunity.microsoft.com/t5/data-architecture-blog/ci-cd-in-azure-synapse-analytics-part-4-the-release-pipeline/bc-p/2978755/highlight/true
+
+
+New CI/CD flow in Azure Synapse Analytics using Azure DevOps 10 step guide
+https://medium.com/@ryoma.nagata0713.b/new-ci-cd-flow-in-azure-synapse-analytics-using-azure-devops-b1729a640c37
+https://github.com/ryoma-nagata/SynapseCICD-template-workspace/tree/main
