@@ -42,4 +42,4 @@ https://github.com/ryoma-nagata/SynapseCICD-template-workspace/tree/main
 https://chocolatey.org/install#individual
 
 
-82,103,  , 146, 155, 197
+   ,71, 89, 99
