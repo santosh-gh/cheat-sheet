@@ -40,6 +40,3 @@ https://medium.com/@ryoma.nagata0713.b/new-ci-cd-flow-in-azure-synapse-analytics
 https://github.com/ryoma-nagata/SynapseCICD-template-workspace/tree/main
 
 https://chocolatey.org/install#individual
-
-
-   ,71, 89, 99
