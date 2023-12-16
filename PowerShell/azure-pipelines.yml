@@ -11,7 +11,7 @@ pool:
 
 resources:
   repositories:
-  - repository: PowerShell
+  - repository: Self
     type: github
     endpoint: mysvcconnection
     name: santosh-gh/cheat-sheet
