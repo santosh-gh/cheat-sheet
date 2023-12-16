@@ -13,7 +13,7 @@ resources:
   repositories:
   - repository: MyGitHubRepo
     type: github
-    endpoint: github-svc-connection
+    endpoint: mysvcconnection
     name: ssantosh-gh/cheat-sheet
     ref: features/tools
 
