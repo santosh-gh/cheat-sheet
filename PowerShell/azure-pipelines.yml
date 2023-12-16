@@ -13,9 +13,9 @@ resources:
   repositories:
   - repository: MyGitHubRepo
     type: github
-    endpoint: GitHub
+    endpoint: github-svc-connection
     name: ssantosh-gh/cheat-sheet
-    ref: PowerShell/
+    ref: features/tools
 
 
 steps:
