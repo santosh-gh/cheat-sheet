@@ -9,7 +9,17 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+  - repository: MyGitHubRepo
+    type: github
+    endpoint: GitHub
+    name: ssantosh-gh/cheat-sheet
+    ref: PowerShell/
+
+
 steps:
+- checkout: MyGitHubRepo
 - script: echo Hello, world!
   displayName: 'Run a one-line script 1'
 
