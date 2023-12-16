@@ -11,7 +11,7 @@ pool:
 
 resources:
   repositories:
-  - repository: PowerShell
+  - repository: common
     type: github
     endpoint: mysvcconnection
     name: santosh-gh/cheat-sheet
@@ -26,6 +26,7 @@ variables:
   version: $[ resources.repositories.common.version ]
 
 steps:
+- checkout: common
 - bash: |
     echo "name = $(name)"
     echo "ref = $(ref)"
@@ -33,7 +34,7 @@ steps:
     echo "type = $(type)"
     echo "url = $(url)"
     echo "url = $(version)"
-- checkout: PowerShell
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script 1'
 
