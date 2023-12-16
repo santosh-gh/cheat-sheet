@@ -9,31 +9,49 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-resources:
-  repositories:
-  - repository: common
-    type: github
-    endpoint: mysvcconnection
-    name: santosh-gh/cheat-sheet/PowerShell
-    ref: master
+# resources:
+#   repositories:
+#   - repository: common
+#     type: github
+#     endpoint: mysvcconnection
+#     name: santosh-gh/cheat-sheet
+#     ref: master
 
-variables:
-  ref: $[ resources.repositories.common.ref ]
-  name: $[ resources.repositories.common.name ]
-  id: $[ resources.repositories.common.id ]
-  type: $[ resources.repositories.common.type ]
-  url: $[ resources.repositories.common.url ]
-  version: $[ resources.repositories.common.version ]
+
+# variables:
+#   ref: $[ resources.repositories.common.ref ]
+#   name: $[ resources.repositories.common.name ]
+#   id: $[ resources.repositories.common.id ]
+#   type: $[ resources.repositories.common.type ]
+#   url: $[ resources.repositories.common.url ]
+#   version: $[ resources.repositories.common.version ]
 
 steps:
-- checkout: common
-- bash: |
-    echo "name = $(name)"
-    echo "ref = $(ref)"
-    echo "id = $(id)"
-    echo "type = $(type)"
-    echo "url = $(url)"
-    echo "url = $(version)"
+- script: |
+    REM ### this will create a 'root' directory for your repo and cd into it
+    mkdir myRepo
+    cd myRepo
+    REM ### initialize Git in the current directory
+    git init
+    REM ### set Git sparsecheckout to TRUE
+    git config core.sparsecheckout true
+    REM ### write the directories that you want to pull to the .git/info/sparse-checkout file (without the root directory)
+    REM ### you can add multiple directories with multiple lines
+    echo cheat-sheet/PowerShell/ >> .git/info/sparse-checkout    
+    REM ### fetch the remote repo using your access token
+    git remote add -f origin https://santosh-gh@cheat-sheet/repo
+    REM ### pull the files from the source branch of this build, using the build-in Azure DevOps variable for the branch name
+    git pull origin $(Build.SourceBranch)
+  displayName: 'Get only test/src_1 & test/src_2 directories instead of entire repository'
+
+# - checkout: common
+# - bash: |
+#     echo "name = $(name)"
+#     echo "ref = $(ref)"
+#     echo "id = $(id)"
+#     echo "type = $(type)"
+#     echo "url = $(url)"
+#     echo "url = $(version)"
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script 1'
