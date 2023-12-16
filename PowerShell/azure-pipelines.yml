@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 # resources:
 #   repositories:
@@ -26,24 +26,8 @@ pool:
 #   url: $[ resources.repositories.common.url ]
 #   version: $[ resources.repositories.common.version ]
 
-steps:
-- script: |
-    REM ### this will create a 'root' directory for your repo and cd into it
-    mkdir myRepo
-    cd myRepo
-    REM ### initialize Git in the current directory
-    git init
-    REM ### set Git sparsecheckout to TRUE
-    git config core.sparsecheckout true
-    REM ### write the directories that you want to pull to the .git/info/sparse-checkout file (without the root directory)
-    REM ### you can add multiple directories with multiple lines
-    echo cheat-sheet/PowerShell/ >> .git/info/sparse-checkout    
-    REM ### fetch the remote repo using your access token
-    git remote add -f origin https://santosh-gh@cheat-sheet/repo
-    REM ### pull the files from the source branch of this build, using the build-in Azure DevOps variable for the branch name
-    git pull origin $(Build.SourceBranch)
-  displayName: 'Get only test/src_1 & test/src_2 directories instead of entire repository'
 
+steps:
 # - checkout: common
 # - bash: |
 #     echo "name = $(name)"
@@ -53,21 +37,22 @@ steps:
 #     echo "url = $(url)"
 #     echo "url = $(version)"
 
-- script: echo Hello, world!
-  displayName: 'Run a one-line script 1'
+# - script: echo Hello, world!
+#   displayName: 'Run a one-line script 1'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-# - task: AzurePowerShell@5
-#   inputs:
-#     azureSubscription: my-arm-service-connection
-#     scriptType: filePath
-#     scriptPath: $(Build.SourcesDirectory)\PowerShell\virtual-network\virtual-network-multi-tier-application\virtual-network-multi-tier-application.ps1
-#     scriptArguments:
-#       -Arg1 val1 `
-#       -Arg2 val2 `
-#       -Arg3 val3
-#     azurePowerShellVersion: latestVersion
-#     pwsh: true
+# - script: |
+#     echo Add other tasks to build, test, and deploy your project.
+#     echo See https://aka.ms/yaml
+#   displayName: 'Run a multi-line script'
+  
+- task: AzurePowerShell@2
+  inputs:
+    azureSubscription: mysvcconnection
+    scriptType: filePath
+    scriptPath: $(Build.SourcesDirectory)\PowerShell\virtual-network\virtual-network-multi-tier-application\virtual-network-multi-tier-application.ps1
+    scriptArguments:
+      -Arg1 val1 `
+      -Arg2 val2 `
+      -Arg3 val3
+    azurePowerShellVersion: latestVersion
+    pwsh: true
