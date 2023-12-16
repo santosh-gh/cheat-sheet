@@ -14,7 +14,7 @@ resources:
   - repository: common
     type: github
     endpoint: mysvcconnection
-    name: santosh-gh/cheat-sheet
+    name: santosh-gh/cheat-sheet/PowerShell
     ref: master
 
 variables:
