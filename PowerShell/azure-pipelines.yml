@@ -11,11 +11,11 @@ pool:
 
 resources:
   repositories:
-  - repository: MyGitHubRepo
+  - repository: PowerShell
     type: github
     endpoint: mysvcconnection
     name: santosh-gh/cheat-sheet
-    ref: PowerShell
+    #ref: PowerShell
 
 
 steps:
