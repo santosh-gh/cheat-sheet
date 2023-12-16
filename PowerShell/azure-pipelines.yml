@@ -11,7 +11,7 @@ pool:
 
 resources:
   repositories:
-  - repository: self
+  - repository: PowerShell
     type: github
     endpoint: mysvcconnection
     name: santosh-gh/cheat-sheet
@@ -19,7 +19,7 @@ resources:
 
 
 steps:
-- checkout: MyGitHubRepo
+- checkout: PowerShell
 - script: echo Hello, world!
   displayName: 'Run a one-line script 1'
 
